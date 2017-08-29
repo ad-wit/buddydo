@@ -1,0 +1,133 @@
+courses:
+	course_id
+	course_public_id
+	course_index
+	course_parent_id
+	course_name
+	course_short_description
+	course_extra_info
+	course_description
+	course_image
+	course_tags
+	course_is_active
+	course_added_at
+	course_updated_at
+	course_updated_by
+	course_added_by
+
+tags_courses
+	course_id
+	tag_id
+
+
+modules:
+	module_id
+	module_public_id
+	module_index
+	module_parent_id
+	module_name
+	module_short_description
+	module_description
+	module_image
+	module_tags
+	module_is_active
+	module_extra_info
+	module_added_at
+	module_updated_at
+	module_updated_by
+	module_added_by
+
+tags_modules:
+	module_id
+	tag_id
+
+
+
+playlists:
+	playlist_id
+	playlist_public_id
+	playlist_index
+	playlist_youtube_id
+	playlist_title
+	playlist_short_description
+	playlist_extra_info
+	playlist_description
+	playlist_image
+	playlist_tags
+	playlist_is_active
+	playlist_added_at
+	playlist_updated_at
+	playlist_updated_by
+	playlist_added_by
+
+articles:
+	article_id
+	article_public_id
+	article_index
+	article_title
+	article_url
+	article_content
+	article_short_description
+	article_extra_info
+	article_description
+	article_image
+	article_tags
+	article_is_active
+	article_added_at
+	article_updated_at
+	article_updated_by
+	article_added_by
+
+
+articleslist:
+	articlelist_id
+	articlelist_public_id
+	articlelist_index
+	articlelist_title
+	articlelist_content
+	articlelist_short_description
+	articlelist_extra_info
+	articlelist_description
+	articlelist_image
+	articlelist_tags
+	articlelist_is_active
+	articlelist_added_at
+	articlelist_updated_at
+	articlelist_updated_by
+	articlelist_added_by
+
+
+
+tags:
+	tag_id
+	tag_public_id
+	tag_index
+	tag_text
+	tag_added_at
+	tag_added_by
+	tag_update_at
+	tag_update_by
+	tag_is_active
+
+users:
+admins:
+
+
+
+videos:
+	video_id
+	video_public_id
+	video_index
+	video_source
+	video_youtube_id
+	video_title
+	video_short_description
+	video_extra_info
+	video_description
+	video_image
+	video_tags
+	video_is_active
+	video_added_at
+	video_updated_at
+	video_updated_by
+	video_added_by

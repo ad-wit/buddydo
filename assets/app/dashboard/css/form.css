@@ -1,0 +1,35 @@
+.ty-form-control-group{
+	position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.ty-form-control-medium{
+    border: 0;
+    /* border-bottom: 1px solid #e3e3e3; */
+    padding: 10px 0;
+    background: transparent;
+    padding-left: 10px;
+    z-index: 1;
+    font-size: 18px;
+    width: 100%;
+}
+.ty-form-control-normal{
+    border: 0;
+    /* border-bottom: 1px solid #e3e3e3; */
+    padding: 10px 0;
+    background: transparent;
+    padding-left: 10px;
+    z-index: 1;
+    width: 100%;
+    font-size: 16px;
+}
+
+.ty-form-control-medium:focus{
+	/* border-bottom: 1px solid #aaaaaa; */
+	outline: 0;
+}
+
+.ty-form-control-normal:focus{
+	/* border-bottom: 1px solid #aaaaaa; */
+	outline: 0;
+}

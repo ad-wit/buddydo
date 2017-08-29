@@ -1,0 +1,322 @@
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+html, body, .ty-container{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+.ty-container{
+	position: relative;
+}
+.ty-header{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e3e3e3;
+    box-sizing: border-box;
+}
+
+.ty-sub-container{
+    width: 100%;
+    background: #ffffff;
+    height: calc( 100% - 50px );
+}
+.ty-add-project-center{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+.ty-add-project-center .ty-add-project{
+	height: 230px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    text-align: center;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.ty-add-project-center .ty-add-project img{
+	height: 60px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+}
+.ty-btn{
+	font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #4d71f2;
+    border: 2px solid #4d71f2;
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.ty-add-project-center .ty-add-project p.ty-heading-one{
+	font-size: 20px;
+	margin-bottom: 0;
+}
+.ty-add-project-center .ty-add-project p.ty-para-one{
+	font-size: 14px;
+    margin-top: 5px;
+}
+.ty-modal-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.ty-modal-close img{
+	height: 50px;
+}
+.modal{
+    padding: 15%;
+}
+.ty-project-input{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.ty-btn-inline{
+    display: inline-block;
+}
+.ty-btn-inline-outline{
+    display: inline-block;
+    color: #4d71f2;
+    background: transparent;
+    border: 2px solid #4d71f2;
+}
+#ex1{
+    background-image: linear-gradient(120deg, rgb(253, 251, 251) 0%, rgb(235, 237, 238) 100%);
+}
+
+.ty-projects-container{
+    /*  */
+}
+
+.ty-project{
+    float: left;
+    /*height: 200px;*/
+    width: 300px;
+    border: 1px solid #e3e3e3;
+    margin: 20px;
+    border-radius: 3px;
+    /* padding: 10px; */
+    display: inline-block;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+}
+.ty-project:hover{
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+}
+.ty-project-anchor-wrapper{
+    text-decoration: none;
+    color: #555;
+}
+.ty-project-info{
+    padding: 10px;
+}
+.ty-project-name{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+.ty-project-name a{
+    text-decoration: none;
+    color: #555;
+}
+.ty-project-description{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.ty-add-project-header a.addtask{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 14px;
+    border-left: 1px solid #e3e3e3;
+    float: right;
+    font-weight: 500;
+    background: #4d71f2;
+}
+
+.ty-add-project-header a.account-links{
+    display: inline-block;
+    text-decoration: none;
+    color: #888;
+    padding: 14px;
+    border-right: 1px solid #e3e3e3;
+    float: left;
+    font-weight: 500;
+}
+.ty-add-project-header a.account-links span{
+    font-weight: 500;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 5px;
+    padding-bottom: 3px;
+}
+.ty-add-project-header a.account-links span.assigned-to{
+    background-color : #4d71f2;
+}
+
+.ty-add-project-header a.account-links span.assigned-by{
+    background-color : #f24d4d;
+}
+
+.section-name a.account-links{
+    display: inline-block;
+    text-decoration: none;
+    color: #888;
+    padding: 14px;
+    float: left;
+    font-weight: 500;
+}
+.section-name a.account-links span{
+    font-weight: 500;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 5px;
+    padding-bottom: 3px;
+}
+.section-name a.account-links span.assigned-to{
+    background-color : #4d71f2;
+}
+
+.section-name a.account-links span.assigned-by{
+    background-color : #f24d4d;
+}
+.lists{
+    display: block;
+    width: 100%;
+    overflow: auto;
+    padding-top: 10px;
+}
+.lists .section{
+    display: inline-block;
+    width: 100%;
+}
+.lists .section .section-name{
+    display: inline-block;
+    width: 100%;
+}
+.lists .list{
+    padding: 5px 14px;
+}
+.lists .list.assigned-to-you .ty-project{
+    background: rgba(133, 77, 242, 0.28);
+    border: none;
+    position: relative;
+}
+.lists .list.assigned-by-you .ty-project{
+    background: rgba(242, 77, 77, 0.28);
+    border: 0;
+    position: relative;
+}
+
+.lists .list .message{
+    margin: 0;
+    font-weight: 500;
+    color: #888;
+    font-size: 24px;
+}
+
+.ty-projects-tasks-container{
+    height: 100%;
+    width: 100%;
+}
+.ty-project-task{
+    height: 100%;
+    width: 300px;
+    display: inline-block;
+    float: left;
+    border-right: 1px solid #e3e3e3;
+    overflow-y: auto;
+}
+.ty-project-add-task-container{
+    /*height: 100%;*/
+    width: 100%;
+    position: relative;
+}
+.ty-project-add-first-task{
+    display: inline-block;
+    width: 100%;
+    height: 65px;
+    padding-top: 0px;
+    border: 2px dashed #4d71f2;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.ty-project-add-first-task img{
+    width: 60px;
+}
+.ty-project-add-first-task p{
+    margin: 0;
+    font-size: 24px;
+    color: #4d71f2;
+    margin-top: 16px;
+}
+
+.error-message, .task-error-message{
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 0;
+    color: #ff5e5e;
+    font-weight: 600;
+    visibility: hidden;
+}
+.ty-task-card{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #e3e3e3;
+}
+.ty-task-card.completed{
+    background: rgba(70, 183, 95, 0.32);
+    border: 0;
+}
+.ty-task-card.incomplete{
+
+}
+.ty-task-change-status{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+.ty-task-change-status.completed{
+    color: #ff0000;
+    text-decoration: underline;
+}
+.ty-task-change-status.incomplete{
+    border: 2px solid #4d71f2;
+    color: #4d71f2;
+}
+.tasklist-completed{
+    width: 30px;
+    float: right;
+    position: absolute;
+    right: -10px;
+    top: -12px;
+}

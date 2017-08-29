@@ -1,0 +1,12 @@
+This project requires php and mysql:
+install xampp, wamp, mamp, or lampp
+start xampp or other server
+
+1. Create a new folder buddytodo inside htdocs(xampp) or www(wamp) or other specific directory from where web server can serve content.
+2. Copy this folder's content to buddytodo folder
+3. Create a database named buddytodo and import the database using buddytodo.sql present in this folder.
+4. Open url http://localhost/buddytodo/ in web browser.
+5. Admin account credentials are-
+
+email - admin@admin.com
+password - admin
