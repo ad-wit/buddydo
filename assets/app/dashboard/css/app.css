@@ -104,6 +104,19 @@ html, body, .ty-container{
     /*  */
 }
 
+.ty-project .style-back{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eafaff;
+    background: linear-gradient(270deg,#eafaff 0,#f7f7f7);
+    top: -25px;
+    -webkit-transform: rotate(10deg) scale(1.3);
+    transform: rotate(10deg) scale(1.3);
+}
+
 .ty-project{
     float: left;
     /*height: 200px;*/
@@ -132,6 +145,12 @@ html, body, .ty-container{
 }
 .ty-project-info{
     padding: 10px;
+    text-align: left;
+}
+.ty-project-actions{
+    width: 100%;
+    height: 40px;
+    background-color: #f6f6f6;
 }
 .ty-project-name{
     margin: 0;
@@ -145,7 +164,7 @@ html, body, .ty-container{
 .ty-project-description{
     margin: 0;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .ty-add-project-header a.addtask{
     display: inline-block;
@@ -224,14 +243,16 @@ html, body, .ty-container{
     padding: 5px 14px;
 }
 .lists .list.assigned-to-you .ty-project{
-    background: rgba(133, 77, 242, 0.28);
+    /*background: rgba(133, 77, 242, 0.28);*/
     border: none;
     position: relative;
+    /*overflow: hidden;*/
 }
 .lists .list.assigned-by-you .ty-project{
-    background: rgba(242, 77, 77, 0.28);
+    /*background: rgba(242, 77, 77, 0.28);*/
     border: 0;
     position: relative;
+    /*overflow: hidden;*/
 }
 
 .lists .list .message{
@@ -251,7 +272,8 @@ html, body, .ty-container{
     display: inline-block;
     float: left;
     border-right: 1px solid #e3e3e3;
-    overflow-y: auto;
+    overflow-y: hidden;
+    position: relative;
 }
 .ty-project-add-task-container{
     /*height: 100%;*/
@@ -319,4 +341,22 @@ html, body, .ty-container{
     position: absolute;
     right: -10px;
     top: -12px;
+}
+.created-date{
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    padding-top: 12px;
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: 500;
+    letter-spacing: 0.8;
+    color: #a5a5a5;
+}
+.trash-tasklist{
+    height: 18px;
+    padding: 9px;
+    float: right;
+    cursor: pointer;
 }

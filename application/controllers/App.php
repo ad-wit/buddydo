@@ -70,11 +70,13 @@ class App extends BaseController {
 		foreach ($this->data['tasks_assigned_to_me'] as $key => $value) {
 			$this->data['tasks_assigned_to_me'][$key]['list_assigned_by'] = $this->db->get_where('users', array( 'user_id' => $value['list_assigned_by'] ))->row_array();
 			$this->data['tasks_assigned_to_me'][$key]['is_completed'] = $this->isTaskListCompleted($value['list_id']);
+			$this->data['tasks_assigned_to_me'][$key]['total_tasks'] = $this->db->get_where('tasks', array('task_list_id' => $value['list_id']))->num_rows();
 		}
 		$this->data["tasks_assigned_by_me"] = $this->db->get_where("lists", array('list_assigned_by' => $user['user_id']))->result_array();
 		foreach ($this->data['tasks_assigned_by_me'] as $key => $value) {
 			$this->data['tasks_assigned_by_me'][$key]['list_assigned_to'] = $this->db->get_where('users', array( 'user_id' => $value['list_assigned_to'] ))->row_array();
 			$this->data['tasks_assigned_by_me'][$key]['is_completed'] = $this->isTaskListCompleted($value['list_id']);
+			$this->data['tasks_assigned_by_me'][$key]['total_tasks'] = $this->db->get_where('tasks', array('task_list_id' => $value['list_id']))->num_rows();
 		}
 		// echo "<pre>";
 		// print_r ( $this->data );
@@ -82,6 +84,24 @@ class App extends BaseController {
 		$this->load->view('app/dashboard/common/header', $this->data);
 		$this->load->view('app/dashboard/projects', $this->data);
 		$this->load->view('app/dashboard/common/footer', $this->data);
+	}
+
+	public function deletetasklist($tasklistid){
+		if( !$this->uauth->isloggedin() ){
+			redirect('app');
+		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
+		}
+		$this->data["tasklistid"] = $tasklistid;
+		$user = $this->uauth->getuser();
+		$task_list = $list = $this->db->get_where('lists', array('list_public_id' => $tasklistid))->row_array();
+		$this->db->where('task_list_id', $task_list['list_id']);
+		$this->db->delete('tasks');
+
+		$this->db->where('list_public_id', $tasklistid);
+		$this->db->delete('lists');
+		redirect($_SERVER["HTTP_REFERER"]);
 	}
 
 	public function isTaskListCompleted($listid){

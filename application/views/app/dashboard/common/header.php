@@ -1,14 +1,14 @@
 <html>
 	<head>
 		<title><?php echo( isset($title) ? $title : "" ); ?></title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet"> -->
 		<link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/modal.css") ); ?>">
 		<link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/overwrite.css") ); ?>">
 		<link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/form.css") ); ?>">
 		<link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/app.css") ); ?>">
-		<!-- <link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/jquery.mCustomScrollbar.min.css") ); ?>"> -->
+		<link rel="stylesheet" href="<?php echo( base_url("assets/app/dashboard/css/perfect-scrollbar.min.css") ); ?>">
 		<script src="<?php echo base_url("assets/app/dashboard/js/jquery.js"); ?>"></script>
-		<!-- <script src="<?php echo( base_url("assets/app/dashboard/js/jquery.mCustomScrollbar.concat.min.js") ); ?>"></script> -->
+		<script src="<?php echo( base_url("assets/app/dashboard/js/perfect-scrollbar.jquery.min.js") ); ?>"></script>
 	</head>
 	<body>
 		<div class="ty-container">

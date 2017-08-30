@@ -19,7 +19,10 @@
 											<p class="ty-project-description">Assigned to <?php echo $value['list_assigned_to']['user_name']; ?></p>
 										</div>
 									</a>
-									<div class="ty-project-actions"></div>
+									<div class="ty-project-actions">
+										<p class="created-date"><span title="Created On"><?php echo date("d M", strtotime($value['list_created_at'])) . "</span> | " . ( $value['total_tasks'] == 0 ? "Empty" : ( $value['total_tasks'] == 1 ? $value['total_tasks'] . " Task" : $value['total_tasks'] . " Tasks" ) ) ?></p>
+										<a href="<?php echo base_url('app/deletetasklist/' . $value['list_public_id']); ?>" title="Delete tasklist"><img class="trash-tasklist" src="<?php echo base_url('assets/app/dashboard/images/trash.png'); ?>" alt=""></a>
+									</div>
 								</div>
 							<?php } ?>
 						<?php }else{ ?>
@@ -46,7 +49,10 @@
 											<p class="ty-project-description">Assigned by <?php echo $value['list_assigned_by']['user_name']; ?></p>
 										</div>
 									</a>
-									<div class="ty-project-actions"></div>
+									<div class="ty-project-actions">
+										<p class="created-date"><span title="Created On"><?php echo date("d M", strtotime($value['list_created_at'])) . "</span> | " . ( $value['total_tasks'] == 0 ? "Empty" : ( $value['total_tasks'] == 1 ? $value['total_tasks'] . " Task" : $value['total_tasks'] . " Tasks" ) ) ?></p>
+										<a href="<?php echo base_url('app/deletetasklist/' . $value['list_public_id']); ?>" title="Delete tasklist"><img class="trash-tasklist" src="<?php echo base_url('assets/app/dashboard/images/trash.png'); ?>" alt=""></a>
+									</div>
 								</div>
 							<?php } ?>
 						<?php }else{ ?>
@@ -58,3 +64,16 @@
 		</div>
 	</div>
 </div>
+
+
+<!--
+
+Task list name - Done
+Task list date
+assigned by / assigned to
+Total tasks / Empty
+Status - Done
+Edit / Delete - Done
+Mark as complete
+
+-->
