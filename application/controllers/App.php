@@ -5,7 +5,6 @@ class App extends BaseController {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->library('uauth');
 
 	}
 
@@ -58,6 +57,9 @@ class App extends BaseController {
 	}
 
 	public function dashboard(){
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
+		}
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
 		}
@@ -103,6 +105,9 @@ class App extends BaseController {
 	public function tasklist($taskid = null){
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
+		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
 		}
 		$this->data["formUrl"] = base_url("app/addproject");
 		$this->data["title"] = "Dashboard";
@@ -158,6 +163,9 @@ class App extends BaseController {
 	public function addtask($taskid){
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
+		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
 		}
 		if( $this->uauth->isloggedin() ){
 			if( $this->input->get('tasktext', true) == true ){
@@ -218,6 +226,9 @@ class App extends BaseController {
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
 		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
+		}
 		$this->form_validation->set_rules('name', 'Name', 'trim|required');
 		$this->form_validation->set_rules('description', 'Description', 'trim|required');
 		if ($this->form_validation->run() == TRUE) {
@@ -245,6 +256,9 @@ class App extends BaseController {
 	public function addtasklist(){
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
+		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
 		}
 		if( $this->uauth->isloggedin() ){
 			if( $this->input->post('listname', true) == true && $this->input->post('buddyemail', true) == true ){
@@ -300,6 +314,9 @@ class App extends BaseController {
 	public function project( $publicId = null, $action = null ){
 		if( !$this->uauth->isloggedin() ){
 			redirect('app');
+		}
+		if( !$this->uauth->haspermission('is-user') ){
+			show_404();
 		}
 		if( !is_null($publicId) && !is_null($action) ){
 			if( $this->common_model->isValidPublicId("projects", "project_public_id", $publicId) ){

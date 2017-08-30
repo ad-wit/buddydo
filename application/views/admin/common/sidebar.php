@@ -8,7 +8,7 @@
 		<li class="section-label">
 			<span class="nav-section-label">Content</span>
 		</li>
-		<li class="<?php echo( $seg2 == "dashboard" ? "active" : "" ); ?>">
+		<li class="<?php echo( $seg1 == "dashboard" ? "active" : "" ); ?>">
 			<a href="<?php echo base_url("dashboard"); ?>">
 				<i class="fa fa-tachometer fa-1x" ></i>
 				<span class="nav-label">Dashboard</span>
